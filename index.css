@@ -1,0 +1,475 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.imageOR {
+    max-width: 100%; /* s'assure que l'image ne dépasse pas la largeur de son conteneur */
+    height: auto; /* maintient le ratio aspect de l'image */
+    display: block; /* pour permettre l'utilisation de margin auto */
+    margin: auto; /* centre l'image horizontalement */
+    position:sticky;
+}
+
+
+.navbar-menu a {
+    font-family: 'Copperplate Gothic', Bold;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 5px 10px; /* Ajoute un peu d'espace autour du texte */
+    border-radius: 10px; 
+}
+
+.navbar-menu a:hover {
+    background-color: rgba(206, 161, 79, 0.74); /* Couleur de fond au survol */
+    color: rgb(255, 255, 255);
+}
+
+.navbar {
+    
+    background-image: url("https://images.photowall.com/products/60722/white-marble-4.jpg?h=699&q=85");
+    background-size: cover; /* Pour couvrir toute la zone de la navbar */
+    background-position: top 15% left 50% ; /* Pour replacer l'image */
+    padding: 10px 0;
+}
+
+.navbar-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    max-width: 50px; 
+    height: auto;
+    box-align: center ;
+    margin-right: 20px; 
+}
+
+.navbar-menu {
+    list-style: none;
+    border: #333;
+    display: flex;
+    align-items: center;
+    font-family: fantasy;
+}
+
+.navbar-menu li {
+    margin-left: 20px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .navbar-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar-logo {
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+
+    .navbar-menu {
+        padding: 0;
+    }
+
+    .navbar-menu li {
+        margin: 0 10px;
+    }
+    .navbar-menu a {
+        background-color: rgba(206, 161, 79, 0.74); /* On change la couleur de fond au survol pour des questions de lisibilité */
+        color: rgb(255, 255, 255); /*changement de la couleur du texte */
+    }
+}
+/*_____________________________________________________________________________Parallaxe__________________________________________________________________________________*/
+.parallax {
+    position: relative;
+    background-image: url('https://xxboxnews.blob.core.windows.net/prod/sites/5/WBIE_MK1_PE_DLC_Omni-Man_1920x1080_23_1103_JPG-04f0e35b74a3cf9546ee-b5f7c5242a82a1dcdb2a.jpg');
+    height: 250px;
+    background-attachment: fixed;
+    background-position: center;
+    background-position-y: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.png-image {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+/*taille image*/
+.png-image img {
+    display: block;
+    width: 300px;
+}
+
+@media (max-width: 480px) {
+    .parallax {
+        background-position: center; 
+        height: 400px;
+    }
+    .png-image img {
+        width: 300px;
+
+    }
+}
+
+#section1{
+    font-family: 'Copperplate Gothic', Bold;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    background-image: url('https://images.photowall.com/products/60722/white-marble-4.jpg?h=699&q=85'); 
+    background-size: cover; /* Assure que l'image couvre toute la section */
+    background-position: center; /* Centre l'image dans la section */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/*________________________________________________________________________section 1 part gauche__________________________________________________________________________*/
+
+.containerG {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    background-image: url();
+    padding: 20px;
+}
+
+.image-sectionG {
+    flex: 1;
+}
+
+.image-sectionG img {
+    width: 70%;
+    width: 100%;
+    float: right;
+    border-radius: 15%;
+    
+}
+
+.text-sectionG {
+    flex: 1;
+    padding-left: 2%;
+    padding-right: 5%;
+    
+}
+
+.text-sectionG h1 {
+    margin: 0;
+    padding-bottom: 5%;
+    
+}
+
+
+
+
+/*________________________________________________________________________section 1 part droite__________________________________________________________________________*/
+
+.containerD {
+    display: flex;
+    text-align: right;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.image-sectionD {
+    flex: 1;
+    
+}
+
+.image-sectionD img {
+    width: 70%;
+    width: 100%;
+    float: left;
+    border-radius: 15%;
+    
+}
+
+.text-sectionD {
+    flex: 1;
+    padding-right: 2%;
+    padding-left: 5%;
+}
+
+.text-sectionD h1 {
+    margin: 0;
+    padding-bottom: 5%;
+    color: #333;
+}
+
+
+
+@media (max-width: 480px) {
+    .containerG, .containerD {
+        flex-direction: column;
+        text-align: center; /* Affichage vertical */
+    }
+
+    .containerG .image-sectionG, .containerD .image-sectionD {
+        order: 1; /* Met l'image en deuxième position */
+    }
+
+    .containerG .text-sectionG, .containerD .text-sectionD {
+        order: 2; 
+        font-size: large;
+        padding-top: 2%;
+    }
+
+    /* Ajustez la largeur ou d'autres propriétés si nécessaire */
+    .image-sectionG img, .image-sectionD img {
+        width: 100%;
+    }
+}
+.lignerouge {
+    position: absolute;
+    top: 407%;
+    left: 0; /* Assurez-vous qu'elle commence du bord gauche de l'écran */
+    width: 100%; /* La largeur doit être de 100% pour s'adapter à la largeur de l'écran */
+    /* Ajoutez d'autres styles ici, comme height, background-color, etc. selon vos besoins */
+}
+
+
+@media (max-width: 480px) {
+    .lignerouge {
+        display: none;
+    }
+}
+
+#section2{
+    font-family: 'Copperplate Gothic', Bold;
+    font-size:x-large;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-image: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAzL2pvYjE3NjItYmFja2dyb3VuZC0wNS14LmpwZw.jpg'); 
+    background-size: cover; /* Assure que l'image couvre toute la section */
+    background-position: center; /* Centre l'image dans la section */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+
+}
+
+.video-container {
+    text-align: center; 
+    margin-top: 5%;
+}
+
+video {
+    max-width: 150%; /* Assure que la vidéo ne dépasse pas la largeur de l'écran */
+    height: auto; /* Maintient le ratio hauteur/largeur */
+}
+
+
+.section3{
+    background-image: url('https://www.bricoman.fr/pub/media/catalog/product/8/6/8/a/carrelage_interieur_de_sol_et_murs_noir_mat_effet_marbre_l_x_l_cm_marquina_gold_1551606_picture.jpeg');
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+.Acheter {
+    font-family: 'Copperplate Gothic', Bold;
+    background-image: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAzL2pvYjE3NjItYmFja2dyb3VuZC0wNS14LmpwZw.jpg');
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    background-image: url();
+    padding: 20px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.image-Acheter {
+    flex: 1;
+}
+
+.image-Acheter img {
+    width: 70%;
+    width: 60%;
+    float: left;
+    padding-left: 15%;
+    
+    
+}
+
+.text-acheter p {
+    flex: 1;
+    padding-left: 2%;
+    padding-right: 5%;
+    
+}
+
+.text-acheter h1 {
+    align: center;
+    align: center;
+    margin: 0;
+    padding-bottom: 5%;
+    
+}
+.boutton{
+    margin-top:15%;
+}
+.bouton-modern {
+    background-color:rgba(206, 161, 79, 0.74); /* Couleur de fond */
+    color: rgb(0, 0, 0); /* Couleur du texte */
+    padding: 10px 20px; /* Padding autour du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur en forme de main au survol */
+    transition: background-color 0.3s, transform 0.2s; /* Transition douce pour le survol et le clic */
+}
+
+.bouton-modern:hover {
+    background-color: darkred; /* Couleur de fond au survol */
+}
+
+.bouton-modern:active {
+    transform: scale(0.98); /* Légère réduction de taille au clic */
+}
+
+
+
+@media (max-width: 480px) {
+    .Acheter{
+        flex-direction: column;
+
+        text-align: center; /* Affichage vertical */
+    }
+
+    .image-Acheter {
+        order: 1;
+        padding-right: 20%;
+    }
+
+    .text-acheter, .text-acheter h1 {
+        order: 2; 
+        font-size: large;
+        padding-top: 2%;
+    }
+
+    /* Ajustez la largeur ou d'autres propriétés si nécessaire */
+    .image-sectionG img, .image-sectionD img {
+        width: 100%;
+    }
+}
+
+
+/*scrollbar*/
+ 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: url("https://images.photowall.com/products/60722/white-marble-4.jpg?h=699&q=85");
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: darkred;
+    border-radius: 10px;
+}
+
+
+.footer {
+    padding-left: 15%;
+    padding-right: 15%;
+    font-family: 'Copperplate Gothic', Bold;
+    background-color: #222;
+    background-size: cover;
+    color: #241a1a;
+    padding: 40px 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-section1 h3,.footer-section2 h3,.footer-section3 h3 {
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+    color: aliceblue;
+}
+
+.footer-section1 p,.footer-section2 p,.footer-section3 p {
+    margin-bottom: 0.5rem;
+    color: darkred;
+}
+
+.footer-section1 ul,.footer-section2 ul,.footer-section3 ul{
+    list-style: none;
+    padding: 0;
+    color: darkred;
+}
+
+.footer-section1 a,.footer-section2 a,.footer-section3 a {
+    text-decoration: none;
+    color: dar;
+    color: darkred;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #241a1a00;
+    margin-right: 10px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #ababab00;
+}
+
+
+
+
+svg:hover {
+  color: aliceblue;
+}
+@media (max-width: 480px) {
+  .footer-section1 ,.footer-section2 {
+      margin-left: 4%;
+  }
+  .footer-container{
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+  }
+  .fin.de.footer {
+      max-width: 50%;
+      margin: 0 auto; /* Ajoutez cette ligne pour centrer le conteneur horizontalement */
+      text-align: center;
+  }
+  
+  .fin.de.footer p.fin {
+      font-size: 0.6rem;
+      color: rgba(255, 255, 255, 0.5); /* Couleur blanche transparente */
+      line-height: 1; /* Ajustez cette valeur selon vos préférences */
+  }
+
+}
+.fin.de.footer {
+  max-width: 50%;
+  margin: 0 auto; /* Ajoutez cette ligne pour centrer le conteneur horizontalement */
+  text-align: center;
+}
+
+.fin.de.footer p.fin {
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.5); /* Couleur blanche transparente */
+  line-height: 1; /* Ajustez cette valeur selon vos préférences */
+}
